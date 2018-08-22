@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+    <head>
+                <meta charset="UTF-8">
+                <title>Sleepy</title>
+              
+                <!-- Firebase Reference -->
+                <script src="https://www.gstatic.com/firebasejs/4.12.0/firebase.js"></script>
+                <link rel="shortcut icon" type="image/png" href="assets/images/favicon.png">
+        <style>
+        
+* {
+    box-sizing: border-box;
+}
+
+.column {
+    margin-top: 70px;
+    float: left;
+    width: 33.33%;
+    padding: 80px;
+}
+
+.row::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+
+img {
+    width: 180px;
+    height: 180px;
+    border-radius: 50%;
+}
+
+body {
+    margin: 0;
+    font-family: Arial;
+    font-size: 17px;
+}
+
+#myVideo {
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    min-width: 100%; 
+    min-height: 100%;
+}
+
+.content {
+    position: fixed;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5);
+    color: #f1f1f1;
+    width: 100%;
+    padding: 53px;
+}
+
+
+
+
+        </style>
+        <body>
+
+                <video autoplay muted loop id="myVideo">
+                        <source src="https://firebasestorage.googleapis.com/v0/b/moodfuse-afb60.appspot.com/o/sleepyvideo.mp4?alt=media&token=4130a3c9-7d30-481b-9b13-4f155aae4536" type="video/mp4">
+                        Your browser does not support video.
+                      </video>
+
+<div class="content">
+   
+<align="left">
+    <a href="index.html">
+        <img src="assets/images/house.png" alt="Home" class="image">
+    </a>
+
+</align>
+    
+                <div class="row">
+                        <div class="column">
+                            <h1>Books</h1>
+                            <p>Need to sleep? Read something</p>
+                          <img src="assets/images/books.png" alt="Books">
+                        </div>
+                        <div class="column">
+                                <h1>Movies</h1>
+                                <p>Movies that will make you yawn</p>
+                          <img src="assets/images/movie.png" alt="Movies">
+                        </div>
+                        <div class="column">
+                                <h1>Cocktails</h1>
+                                <p>Need a nap? Drink!</p>
+                          <img src="assets/images/cocktails.png" alt="Cocktails">
+                        </div>
+                      </div>
+
+                    </div> 
+
+   
+
+        </body>
+    </head>
+</html>

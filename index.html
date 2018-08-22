@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en-us">
+
+<head>
+
+  <meta charset="UTF-8">
+  <title>Mood Fuse</title>
+  
+
+  <!-- Firebase Reference -->
+  <script src="https://www.gstatic.com/firebasejs/4.12.0/firebase.js"></script>
+  <link rel="shortcut icon" type="image/png" href="assets/images/favicon.png">
+
+  <style>
+  * {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Arial;
+    font-size: 17px;
+}
+
+#myVideo {
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    min-width: 100%; 
+    min-height: 100%;
+}
+
+.content {
+    position: fixed;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5);
+    color: #f1f1f1;
+    width: 100%;
+    padding: 20px;
+}
+
+
+img {
+  align-content: left;
+  width: 140px;
+  height: 135px;
+}
+.zoom {
+  padding: 10px;
+    transition: transform .2s;
+    width: 160px;
+    height: 152px;
+    margin: 0 auto;
+}
+
+.zoom:hover {
+    transform: scale(1.5);
+    -ms-transform: scale(1.5); 
+    -webkit-transform: scale(1.5); 
+    transform: scale(1.5);
+}
+
+.column {
+    float: left;
+    width: 33.33%;
+    padding: 160px;
+}
+
+.footer {
+
+  padding: 20px;
+}
+
+  </style>
+
+</head>
+
+<body>
+
+    <video autoplay muted loop id="myVideo">
+        <source src="https://firebasestorage.googleapis.com/v0/b/moodfuse-afb60.appspot.com/o/emotions.mp4?alt=media&token=182687d8-a312-4409-8832-ad63e8719c2b" type="video/mp4">
+        Your browser does not support HTML5 video.
+      </video>
+      
+      
+      <div class="content">
+        <h1>What is your mood?</h1>
+        <p> Choose any mood and get your recommendations</p>
+        <div class="row">
+          <div class="column">
+        <div class="zoom">
+        <a href="love.html"><img src="assets/images/love.png"></a>
+        </div>
+        <br>
+        <div class="zoom">
+        <a href="sad.html"><img src="assets/images/sad.png"></a>
+        </div>
+        </div>
+        <br>
+        <div class="column">
+        <div class="zoom">
+        <a href="angry.html"><img src="assets/images/mad.png"></a>
+        </div>
+        <br>
+        <div class="zoom">
+        <a href="sleepy.html"><img src="assets/images/sleep.png"></a>
+      </div>
+      </div>
+
+      <div class="column">
+          <div class="zoom">
+          <a href="happy.html"><img src="assets/images/happy.png"></a>
+          </div>
+          <br>
+          <div class="zoom">
+          <a href="bored.html"><img src="assets/images/bored.png"></a>
+        </div>
+        </div>
+</div>
+        </div>
+      </div>
+
+      
+      
+    
+
+  <!-- jQuery -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+  <!-- Script -->
+  <script src="logic.js"></script>
+  
+
+</body>
+
+</html>
