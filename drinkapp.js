@@ -13,7 +13,7 @@ $(document).ready(function () {
 
 //  var database = firebase.database();
 
-   $(".buttongreen").on("click", function() {
+   $("#imgthree").on("click", function() {
 
        $(".results").empty();
        var mood = $(this).attr("data-drink");
