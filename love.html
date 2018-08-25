@@ -2,11 +2,12 @@
 <html>
     <head>
                 <meta charset="UTF-8">
-                <title>In Love</title>
+                <title>Love</title>
               
                 <!-- Firebase Reference -->
                 <script src="https://www.gstatic.com/firebasejs/4.12.0/firebase.js"></script>
                 <link rel="shortcut icon" type="image/png" href="assets/images/favicon.png">
+                <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="crossorigin="anonymous"></script>
         <style>
         
 * {
@@ -62,7 +63,7 @@ body {
         <body>
 
                 <video autoplay muted loop id="myVideo">
-                        <source src="https://firebasestorage.googleapis.com/v0/b/moodfuse-afb60.appspot.com/o/newlove.mp4?alt=media&token=70e036eb-a3a2-4ee3-afb8-4f2745ec3176" type="video/mp4">
+                        <source src="https://firebasestorage.googleapis.com/v0/b/moodfuse-afb60.appspot.com/o/angry.mp4?alt=media&token=0dd20ca5-392d-4920-b5de-da17c698d778" type="video/mp4">
                         Your browser does not support video.
                       </video>
 
@@ -78,22 +79,68 @@ body {
                 <div class="row">
                         <div class="column">
                             <h1>Books</h1>
-                            <p>In love? Here are the books for you</p>
-                          <img src="assets/images/books.png" alt="Books">
+                            <p>Here are the books for you</p>
+                          <img src="assets/images/books.png" alt="Books" id = "imgone" data-mood = "love">
                         </div>
                         <div class="column">
                                 <h1>Movies</h1>
-                                <p>In love? Cheesy movies for you</p>
-                          <img src="assets/images/movie.png" alt="Movies">
+                                <p>Cheesy movies for you</p>
+                          <img src="assets/images/movie.png" alt="Movies" id = "imgtwo" data-name = "love">
                         </div>
                         <div class="column">
                                 <h1>Cocktails</h1>
-                                <p>Love? Sure? Drink and let me know after</p>
-                          <img src="assets/images/cocktails.png" alt="Cocktails">
+                                <p> Try out these drinks </p>
+                          <img src="assets/images/cocktails.png" alt="Cocktails" id = "imgthree" data-drink = "love">
                         </div>
                       </div>
+                      <div id = "results"></div>
+
+                      
+<!-- Form for asking user reviews -->
+
+<form id = "reviewform">
+    <div class="form-group">
+        <p>Please leave your reviews below</p>
+      <label for="exampleInputEmail1">Email address</label>
+      <input type="email" class="form-control" id="InputEmail" aria-describedby="emailHelp" placeholder="Enter email">
+      <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+    </div>
+    
+    <div class="form-group">
+      <label for="exampleTextarea">Leave your review here!</label>
+      <textarea class="form-control" id="ReviewTextarea" rows="3"></textarea>
+    </div>
+    
+    <button type="submit" class="btn btn-primary review-submit">Submit</button>
+  </form>
+<!-- Current Reviews-->
+<div class="card mb-4">
+    <div class="card-body">
+      <h3 class="card-title">Current Reviews</h3>
+      <table class="table table-sm table-hover" id='review-table'>
+        <thead>
+          <tr>
+            <th scope="col">Customer Email</th>
+            <th scope="col">Review</th>
+           
+          </tr>
+        </thead>
+        <tbody>
+        </tbody>
+      </table>
+    </div>
+  </div>
 
                     </div> 
+
+                    <script src = "assets/javascript/bookapp.js"></script>
+                    <script src = "assets/javascript/drinkapp.js"></script>
+                    <script src = "assets/javascript/movieapp.js"></script>
+                    
+                    
+
+
+                    
 
    
 
