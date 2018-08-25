@@ -13,7 +13,7 @@ $(document).ready(function () {
 
  var database = firebase.database();
 
-   $(".buttonyellow").on("click", function() {
+   $("#imgone").on("click", function() {
        
        $("#results").empty();
 

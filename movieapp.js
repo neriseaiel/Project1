@@ -13,7 +13,7 @@
      });
 
 
-    $(".buttonblue").on("click", function (){
+    $("#imgtwo").on("click", function (){
 
       $("#results").empty();
       var a = $(this).attr("data-name");
